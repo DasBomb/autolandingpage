@@ -2,22 +2,22 @@
     export let btn1 = 'btn1',
     btn2 = 'btn2',
     btn3 = 'btn3',
-    href1 = '/',
-    href2 = '/',
-    href3='/';
+    href1 = '',
+    href2 = '',
+    href3='';
 
 </script>
 
 
 <div class="container">
     <div class="btn">
-        <a href="/{btn1}">{btn1}</a>
+        <a href="#{btn1}">{btn1}</a>
     </div>
     <div class="btn">
-        <a href="/{btn2}">{btn2}</a>
+        <a href={href2}>{btn2}</a>
     </div>
     <div class="btn">
-        <a href="/{btn3}">{btn3}</a>
+        <a href="{href3}">{btn3}</a>
     </div>
 </div>
 
