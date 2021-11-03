@@ -10,9 +10,8 @@
     import Option2 from '../components/pics/Option2.jpg'
     import Option3 from '../components/pics/Option3.jpg'
     
-
-let btn1, imgSrc, imgSrc2;
-$: btn1, imgSrc, imgSrc2;
+let btn1, btn2, btn3, textArea, title, imgSrc, imgSrc2;
+$: btn1, btn2, btn3, textArea, title, imgSrc, imgSrc2;
 
 </script>
 
@@ -30,12 +29,18 @@ $: btn1, imgSrc, imgSrc2;
     <option value={Option3}>Bild 3</option>
 </select>
 
-<input type="text" placeholder="btn1 text" bind:value={btn1}>
+<input type="text" placeholder="Name the first section" bind:value={btn1}>
+<input type="text" placeholder="Name the second section" bind:value={btn2}>
+<input type="text" placeholder="Namethe third section" bind:value={btn3}>
 
-<Nav {btn1}></Nav>
+
+<textarea name="" id="" cols="30" rows="10" bind:value={textArea}></textarea>
+<input type="text" placeholder="title text" bind:value={title}>
+
+<Nav {btn1} {btn2} {btn3} ></Nav>
 <img src="" alt=""> /* Här ska avataren vara */
-<h1>Title</h1>
-<Text></Text>
+<h1>{title}</h1>
+<Text {textArea}></Text>
 <ImgRight {imgSrc2}></ImgRight>
 <ImgLeft {imgSrc}></ImgLeft>
 <Carousel></Carousel>
