@@ -8,8 +8,8 @@
     import ImgRight from '../components/ImgRight.svelte'
 
 
-let btn1, btn2, btn3, textArea, title;
-$: btn1, btn2, btn3, textArea, title;
+let btn1, btn2, btn3, textArea, title , textArea2, textArea3;
+$: btn1, btn2, btn3, textArea, title , textArea2, textArea3;
 
 
 </script>
@@ -18,6 +18,9 @@ $: btn1, btn2, btn3, textArea, title;
 <input type="text" placeholder="Name the first section" bind:value={btn1}>
 <input type="text" placeholder="Name the second section" bind:value={btn2}>
 <input type="text" placeholder="Namethe third section" bind:value={btn3}>
+
+<input type="text" placeholder="left" bind:value={textArea3}>
+<input type="text" placeholder="right" bind:value={textArea2}>
 
 
 <textarea name="" id="" cols="30" rows="10" bind:value={textArea}></textarea>
@@ -28,8 +31,8 @@ $: btn1, btn2, btn3, textArea, title;
 <h1>{title}</h1>
 <Text {textArea}></Text>
 
-<ImgRight></ImgRight>
-<ImgLeft></ImgLeft>
+<ImgRight {textArea2}></ImgRight>
+<ImgLeft {textArea3} ></ImgLeft>
 <Carousel></Carousel>
 <TextWithBtn></TextWithBtn>
 <ContactForm></ContactForm>
