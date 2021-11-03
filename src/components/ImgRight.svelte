@@ -1,11 +1,14 @@
 <script>
-	export let textArea;
 	export let imgSrc;
+
+	let imgRightText;
+	$: imgRightText;
 </script>
 
 <div class="container">
-	<p class="txtRight">{textArea}</p>
 	<img class="imgRight" src={imgSrc} alt="" />
+	<input type="text" placeholder="Text for right photo" bind:value={imgRightText} />
+	<p class="txtLeft">{imgRightText}</p>
 </div>
 
 <style>

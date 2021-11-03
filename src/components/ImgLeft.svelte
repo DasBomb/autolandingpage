@@ -1,11 +1,16 @@
 <script>
 	export let textArea;
 	export let imgSrc;
+
+	let imgLeftText;
+	$: imgLeftText;
 </script>
 
 <div class="container">
 	<img class="imgLeft" src={imgSrc} alt="" />
-	<p class="txtLeft">{textArea}</p>
+	<input type="text" placeholder="leftImgText" bind:value={imgLeftText} />
+	<p class="txtLeft">{imgLeftText}</p>
+	
 </div>
 
 <style>
