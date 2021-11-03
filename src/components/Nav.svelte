@@ -11,13 +11,13 @@
 
 <div class="container">
     <div class="btn">
-        <a href={href1}>{btn1}</a>
+        <a href="/{btn1}">{btn1}</a>
     </div>
     <div class="btn">
-        <a href={href2}>{btn2}</a>
+        <a href="/{btn2}">{btn2}</a>
     </div>
     <div class="btn">
-        <a href={href3}>{btn3}</a>
+        <a href="/{btn3}">{btn3}</a>
     </div>
 </div>
 
@@ -28,12 +28,14 @@
         justify-content: flex-end;
         font-family: sans-serif;
     }
+
     .btn{
         margin-left: 1em;
         background-color: grey;
         padding: 10px;
         border-radius: 5%;
     }
+
     a{
         text-decoration: none;
         text-transform: uppercase;
