@@ -7,17 +7,19 @@
     import ImgLeft from '../components/ImgLeft.svelte'
     import ImgRight from '../components/ImgRight.svelte'
 
-let btn1;
-$: btn1;
+let btn1, title;
+$: btn1, title;
 
 </script>
 
 
 <input type="text" placeholder="btn1 text" bind:value={btn1}>
 
+<input type="text" placeholder="title text" bind:value={title}>
+
 <Nav {btn1}></Nav>
 <img src="" alt=""> /* Här ska avataren vara */
-<h1>Title</h1>
+<h1>{title}</h1>
 <Text></Text>
 <ImgRight></ImgRight>
 <ImgLeft></ImgLeft>
