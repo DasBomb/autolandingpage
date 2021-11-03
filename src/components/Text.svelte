@@ -1,10 +1,10 @@
 <script>
-    export let inputText = 'This is an input text'
+    export let textArea = 'This is an input text'
 </script>
 
 <div class="container">
-    <div>
-        <p>{inputText}</p>
+    <div style="width:80% word-wrap: break-word">
+        <p>{textArea}</p>
     </div>
 </div>
 
@@ -14,5 +14,6 @@
         justify-content: center;
         margin: 1em auto;
         font-family: sans-serif;
+       
     }
 </style>
