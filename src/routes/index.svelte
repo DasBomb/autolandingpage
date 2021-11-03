@@ -7,15 +7,18 @@
     import ImgLeft from '../components/ImgLeft.svelte'
     import ImgRight from '../components/ImgRight.svelte'
 
-let btn1;
-$: btn1;
+let btn1, btn2, btn3;
+$: btn1, btn2, btn3;
 
 </script>
 
 
-<input type="text" placeholder="btn1 text" bind:value={btn1}>
+<input type="text" placeholder="Name the first section" bind:value={btn1}>
+<input type="text" placeholder="Name the second section" bind:value={btn2}>
+<input type="text" placeholder="Namethe third section" bind:value={btn3}>
 
-<Nav {btn1}></Nav>
+
+<Nav {btn1} {btn2} {btn3} ></Nav>
 <img src="" alt=""> /* Här ska avataren vara */
 <h1>Title</h1>
 <Text></Text>
