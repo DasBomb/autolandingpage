@@ -7,13 +7,30 @@
     import ImgLeft from '../components/ImgLeft.svelte'
     import ImgRight from '../components/ImgRight.svelte'
 
+    import Option1 from '../components/pics/Option1.jpg'
+    import Option2 from '../components/pics/Option2.jpg'
+    import Option3 from '../components/pics/Option3.jpg'
+    
 
-let btn1, btn2, btn3, textArea, title, color1, color2;
-$: btn1, btn2, btn3, textArea, title, color1, color2;
+let btn1, btn2, btn3, textArea, title, color1, color2, imgSrc, imgSrc2;
+$: btn1, btn2, btn3, textArea, title, color1, color2, imgSrc, imgSrc2;
 
 
 </script>
 
+<label for="leftPic">Choose your left picture:</label>
+<select name="leftPic" bind:value={imgSrc}>
+    <option value={Option1}>Bild 1</option>
+    <option value={Option2}>Bild 2</option>
+    <option value={Option3}>Bild 3</option>
+</select>
+
+<label for="rightPic">Choose your right picture:</label>
+<select name="rightPic" bind:value={imgSrc2}>
+    <option value={Option1}>Bild 1</option>
+    <option value={Option2}>Bild 2</option>
+    <option value={Option3}>Bild 3</option>
+</select>
 
 
 
@@ -34,11 +51,14 @@ $: btn1, btn2, btn3, textArea, title, color1, color2;
 <img src="" alt=""> /* Här ska avataren vara */
 <h1>{title}</h1>
 <Text {textArea}></Text>
+<ImgRight {imgSrc2}></ImgRight>
+<ImgLeft {imgSrc}></ImgLeft>
+
 <div style="background-color: {color1};">
-<ImgRight></ImgRight>
+
 </div>
 <div style="background-color: {color2};">
-<ImgLeft></ImgLeft>
+
 </div>
 <Carousel></Carousel>
 <TextWithBtn></TextWithBtn>
