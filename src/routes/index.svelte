@@ -12,8 +12,10 @@
     import Option3 from '../components/pics/Option3.jpg'
     
 
-let btn1, btn2, btn3, textArea, title, color1, color2, imgSrc, imgSrc2;
-$: btn1, btn2, btn3, textArea, title, color1, color2, imgSrc, imgSrc2;
+
+let btn1, btn2, btn3, textArea, title, color1, color2, imgSrc, imgSrc2, textArea2, textArea3;
+$: btn1, btn2, btn3, textArea, title, color1, color2, imgSrc, imgSrc2,textArea2, textArea3;
+
 
 
 </script>
@@ -38,10 +40,15 @@ $: btn1, btn2, btn3, textArea, title, color1, color2, imgSrc, imgSrc2;
 <input type="text" placeholder="Name the second section" bind:value={btn2}>
 <input type="text" placeholder="Namethe third section" bind:value={btn3}>
 
+
+<input type="text" placeholder="left" bind:value={textArea3}>
+<input type="text" placeholder="right" bind:value={textArea2}>
+
 <label>Choose a background color for the first section: 
     <input type="color" placeholder="color1" bind:value={color1}></label>
 <label>Choose a background color for the second section:
     <input type="color" placeholder="color1" bind:value={color2}> </label>
+
 
 
 <textarea name="" id="" cols="30" rows="10" bind:value={textArea}></textarea>
@@ -51,8 +58,8 @@ $: btn1, btn2, btn3, textArea, title, color1, color2, imgSrc, imgSrc2;
 <img src="" alt=""> /* Här ska avataren vara */
 <h1>{title}</h1>
 <Text {textArea}></Text>
-<ImgRight {imgSrc2}></ImgRight>
-<ImgLeft {imgSrc}></ImgLeft>
+<ImgRight {textArea2} {imgSrc2}></ImgRight>
+<ImgLeft {textArea3} {imgSrc}></ImgLeft>
 
 <div style="background-color: {color1};">
 
@@ -60,6 +67,7 @@ $: btn1, btn2, btn3, textArea, title, color1, color2, imgSrc, imgSrc2;
 <div style="background-color: {color2};">
 
 </div>
+
 <Carousel></Carousel>
 <TextWithBtn></TextWithBtn>
 <ContactForm></ContactForm>

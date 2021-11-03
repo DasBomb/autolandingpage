@@ -1,11 +1,14 @@
 <script>
-	export let textArea;
+
+	export let textArea2;
 	export let imgSrc2;
+
 </script>
 
 <div class="container">
-	<p class="txtRight">{textArea}</p>
+	<p class="txtRight">{textArea2}</p>
 	<img class="imgRight" src={imgSrc2} alt="" />
+
 </div>
 
 <style>
