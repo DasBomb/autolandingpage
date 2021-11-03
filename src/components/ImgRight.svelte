@@ -1,7 +1,6 @@
 <script>
 	export let textArea;
 	export let imgSrc;
-	// import watermelon from '../assets/watermelon.jpg';
 </script>
 
 <div class="container">

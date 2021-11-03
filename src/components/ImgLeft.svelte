@@ -1,7 +1,6 @@
 <script>
-	export let textArea = "asdakjdhasdk hahdka hdakjsdh akdha skjdad";
-	export let imgSrc = watermelon;
-	import watermelon from '../assets/watermelon.jpg';
+	export let textArea;
+	export let imgSrc;
 </script>
 
 <div class="container">
